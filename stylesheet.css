@@ -1,4 +1,4 @@
-/* latin-ext */
+/* Latin-ext and Latin fonts */
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -6,7 +6,6 @@
   src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAUi-qNiXg7eU0.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -14,7 +13,6 @@
   src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v15/S6u8w4BMUTPHjxsAXC-qNiXg7Q.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin-ext */
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -22,7 +20,6 @@
   src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_FQftx9897sxZ.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -30,7 +27,6 @@
   src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI5wq_Gwftx9897g.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin-ext */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -38,7 +34,6 @@
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjxAwXiWtFCfQ7A.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -46,7 +41,6 @@
   src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* latin-ext */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -54,7 +48,6 @@
   src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwaPGQ3q5d0N7w.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-/* latin */
 @font-face {
   font-family: 'Lato';
   font-style: normal;
@@ -63,6 +56,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Common styles for your content */
 a {
   color: #1772d0;
   text-decoration: none;
@@ -74,14 +68,16 @@ a:hover {
   text-decoration: none;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
+body, td, th, tr, p, a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
+  
+}
+body {
+  background-image: url('/images/background.jpg'); /* Replace 'your-image-url.jpg' with the URL of your background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 strong {
@@ -94,6 +90,14 @@ h2 {
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
+}
+
+h3 {
+  margin: 0;
+  font-weight: normal;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-left: 16%;
 }
 
 .papertitle {
@@ -109,27 +113,219 @@ h2 {
   font-size: 32px;
 }
 
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Style for the navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #020000; /* Background color */
+  z-index: 100; /* Ensure it's on top of other content */
+}
+
+/* Style for the toggle bar (checkbox) */
+.menu-icon {
+  cursor: pointer;
+  padding: 10px;
+  display: block;
+}
+
+/* Style for the navigation links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white; /* Text color */
+  text-align: center;
+  padding: 14px 16px; /* Padding around each link */
+  text-decoration: none; /* Remove underlines from links */
+  font-size: 18px; /* Text size */
+  transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd; /* Background color on hover */
+  color: #333; /* Text color on hover */
+}
+
+/* Style for the active link (current page) */
+.navbar a.active {
+  background-color: #4CAF50; /* Background color for the active link */
+}
+
+/* Center the navigation links horizontally */
+.navbar a {
+  margin: 0;
+}
+
+/* Add a responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+  .navbar a {
+      float: none;
+      display: block;
+      text-align: left;
+  }
+  .menu-icon {
+      float: right;
+  }
+}
+
+/* Add styles for the projects container */
+/* Center-align the projects container and set its width to 70% */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center-align the container */
+  gap: 3px;
+  width: 90%; /* Set the width to 70% of the page width */
+  margin: 0 auto; /* Center-align the container horizontally */
+}
+
+
+
+/* Style for the project sections with a 3D-like effect */
+.project {
+  background-color: #f0f0f0; /* Background color for the placard */
+  border: 1px solid #ccc; /* Border for the placard */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Add padding for content */
+  margin: 20px; /* Add margin to separate placards */
+  width: 350px; /* Set the width for the placard */
+  height: 400px; /* Set the height for the placard */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Create a shadow for the 3D effect */
+  transition: transform 0.2s; /* Add a smooth transition effect */
+}
+
+.projectnew {
+  background-color: #f0f0f0; /* Background color for the placard */
+  border: 1px solid #ccc; /* Border for the placard */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Add padding for content */
+  margin: 20px; /* Add margin to separate placards */
+  width: 350px; /* Set the width for the placard */
+  height: 500px; /* Set the height for the placard */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Create a shadow for the 3D effect */
+  transition: transform 0.2s; /* Add a smooth transition effect */
+}
+
+.project:hover {
+  transform: translateY(-5px); /* Elevate the placard on hover */
+}
+
+
+h2 {
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 40px;
+  color: #060606; /* Header text color in dark mode */
+  width: 69%; /* Set the width to 70% of the page width */
+  margin: 0 auto; /* Center-align the h2 element horizontally */
+}
+
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  
+}
+
+.name {
+  padding-top: 20px;
+  margin: 0;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  
+}
+
 .one {
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  height: 50%;
   position: relative;
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 16%; /* Start from 70% of the page width */
+  font-size: 24px; /* Increase the font size for icons */
+  gap: 20px; /* Add some spacing between icons */
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.icon {
+  text-decoration: none;
+  color: #000; /* Icon color */
+  font-size: 40px;
 }
 
-span.highlight {
-  background-color: #ffffd0;
+.icon:hover {
+  color: #0077b5; /* Icon color on hover (LinkedIn) */
+}
+
+/* Additional styling for the icons */
+.icon i {
+  transition: color 0.3s; /* Smooth color transition on hover */
 }
