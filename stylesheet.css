@@ -74,7 +74,7 @@ body, td, th, tr, p, a {
   
 }
 body {
-  background-image: url('/images/background.jpg'); /* Replace 'your-image-url.jpg' with the URL of your background image */
+  /* background-image: url('/images/background.jpg'); Replace 'your-image-url.jpg' with the URL of your background image */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -179,6 +179,9 @@ input:checked + .slider:before {
 /* Style for the navigation bar */
 .navbar {
   position: fixed;
+  display: flex;
+
+  align-items: center;
   top: 0;
   left: 0;
   right: 0;
@@ -254,7 +257,7 @@ input:checked + .slider:before {
   padding: 20px; /* Add padding for content */
   margin: 20px; /* Add margin to separate placards */
   width: 350px; /* Set the width for the placard */
-  height: 400px; /* Set the height for the placard */
+  height: 430px; /* Set the height for the placard */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Create a shadow for the 3D effect */
   transition: transform 0.2s; /* Add a smooth transition effect */
 }
@@ -266,7 +269,7 @@ input:checked + .slider:before {
   padding: 20px; /* Add padding for content */
   margin: 20px; /* Add margin to separate placards */
   width: 350px; /* Set the width for the placard */
-  height: 500px; /* Set the height for the placard */
+  height: 530px; /* Set the height for the placard */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Create a shadow for the 3D effect */
   transition: transform 0.2s; /* Add a smooth transition effect */
 }
@@ -288,9 +291,13 @@ h2 {
 
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 700;
   
+}
+
+.research-desc {
+  color: #747373;
 }
 
 .name {
