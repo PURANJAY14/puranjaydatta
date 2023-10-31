@@ -4,11 +4,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <title>Puranjay Datta</title>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta name="author" content="Puranjay Datta">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
+   
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" id="theme-style">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
   </head>
@@ -19,16 +22,28 @@
     <!-- Rounded switch -->
 
 <div class="navbar">
-  <a class="active" href="#home">Home</a>
-  <a href="#Research">Research</a>
-  <a href="#Projects">Projects</a>
-  <a href="data/Curriculum_Vitae.pdf" target="_blank">CV</a>
-  <a href="#contact">Contact</a>
-  <label class="switch">
+  <a class="nav-link active" href="#home">Home</a>
+  <a class="nav-link" href="#Research">Research</a>
+  <a class="nav-link" href="#Projects">Projects</a>
+  <a class="nav-link" href="data/Curriculum_Vitae.pdf" target="_blank">CV</a>
+  <a class="nav-link" href="#contact">Contact</a>
+  <label class="switch" >
     <input type="checkbox">
-    <span class="slider round"></span>
+    <span class="slider round" id="theme-changer"></span>
   </label>
 </div>
+
+
+<script>
+  $(document).ready(function() {
+    $('.nav-link').click(function() {
+      $('.nav-link').removeClass('active');
+      $(this).addClass('active');
+    });
+  });
+</script>
+
+
 
 
       <table style="width:70%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" id="home"><tbody>
@@ -71,7 +86,7 @@
         <a href="https://github.com/PURANJAY14/" target="_blank" class="icon">
             <i class="fab fa-github"></i>
         </a>
-        <a href="data/Curriculum_Vitae.pdf" target="_blank" class="icon cv-icon">
+        <a href="data/CV.pdf" target="_blank" class="icon cv-icon">
           <i class="far fa-file-pdf"></i>
       </a>
       
@@ -94,14 +109,14 @@
         <img src='images/ti.png' width=100% height=100%>
       </div>
       <td style="padding:20px;width:50%;vertical-align:top">
-      
+        <br>
         <span class="papertitle">Predistortion in Power Amplifier</span>
       
     <br>
     
     
       <p></p>
-      <p>
+      <p class="research-desc">
         Experimented with Iterative Learning Control, Vector Switched Models on industrial amplifiers for various bandwidths and compared based on ACLR, SNR metrics.</p></tr>
   
   <tr>
@@ -115,13 +130,13 @@
       </div>
     </td>
     <td style="padding:20px;width:50%;vertical-align:top">
-      
+      <br>
       <span class="papertitle">Transfer learning in NVIDIA isaacgym</span>
     
   <br>
   
    
-    <p>
+    <p class="research-desc">
       Analyzed the Adversarial Motion Priors in training humanoid agents using motion datasets, investigating transfer learning to another task using one-shot transfer learning </p>
   </td>
   </tr>
@@ -135,7 +150,7 @@
       </div>
     </td>
     <td style="padding:20px;width:50%;vertical-align:top">
-      
+        <br>
         <span class="papertitle">Neurips Reconnaissance Blind Chess Agent</span>
       
     <br>
@@ -144,7 +159,7 @@
       /
       <a href="Projects/RBC_CHESS/Team4 RBC (2).pdf">Report</a>
       <p></p>
-      <p>
+      <p class="research-desc">
         Replay buffer development, opponent modeling, and a scoring system adaptation were employed to assess and enhance the Fianchetto bot's(modelled as a POMDP) performance in chess, focusing on threat detection and strategic move selection. </p>
     </td>
   </tr>
@@ -158,7 +173,7 @@
       </div>
     </td>
     <td style="padding:20px;width:50%;vertical-align:top">
-      
+      <br>
       <span class="papertitle">Networked Fairness in Cake Cutting</span>
     
   <br>
@@ -167,7 +182,7 @@
     /
     <a href="Projects/Cake_cutting/CS6002_Report_AAMAS_2023_Format.pdf">Report</a>
     <p></p>
-    <p>
+    <p class="research-desc"> 
       Pioneered a novel approach to traditional cake-cutting with networked agents for efficient envy-free allocations using moving knife procedures Austin Cut and Brams Taylor Zwicker procedure</p>
   </td>
   </tr>
@@ -181,7 +196,7 @@
       </div>
     </td>
     <td style="padding:20px;width:50%;vertical-align:top">
-      
+      <br>
       <span class="papertitle">Inference using Online Learning</span>
     
   <br>
@@ -190,7 +205,7 @@
     /
     <a href="Projects/ddp/ddp_puranjay.pdf">Report</a>
     <p></p>
-    <p>
+    <p class="research-desc">
       Hierarchichal inference using modified hedge with a non convex lipschitz loss in a 2D continuous experts setting utilizing insights from Online Recursive Weighting algorithm. </p>
   </td>
   </tr>
@@ -212,7 +227,7 @@
       </div>
     </td>
     <td style="padding:20px;width:70%;vertical-align:top">
-      
+      <br>
       <span class="papertitle">Multiarm Bandits</span>
     
   <br>
@@ -221,7 +236,7 @@
     /
     <a href="Projects/BANDITS/RnD.pdf">Presentation 2</a>
   
-    <p>
+    <p class="research-desc">
       Involved multi-armed bandit best arm identification, implementing successive elimination and median elimination algorithms, adapting confidence bounds for grouped bandits with constraints, and analyzing the stopping time complexity of a D tracking variant against hardness measures with a focus on helpful arm characterization. </p>
   </td>
   </tr>
@@ -235,7 +250,7 @@
       </div>
     </td>
     <td style="padding:20px;width:50%;vertical-align:top">
-      
+      <br>
       <span class="papertitle">Generative model for Weak Supervision</span>
     
   <br>
@@ -243,7 +258,7 @@
     <a href="Projects/726/726.pdf">Report</a>
     
   
-    <p>
+    <p class="research-desc">
       leveraged the Snorkel framework to train a generative model for learning relationships among multiple labeling functions, which, when combined with discriminative models like logistic regression and recurrent neural networks, significantly enhanced accuracy in tasks like salary prediction and Twitter sentiment analysis.</p>
        </td>
   </tr>
@@ -259,7 +274,7 @@
       </div>
     </td>
     <td style="padding:20px;width:100%;vertical-align:top">
-      
+      <br>
       <span class="papertitle">Wavelets in Convolutional Neural Network</span>
     
   <br>
@@ -267,7 +282,7 @@
     <a href="Projects/wavelets/wavletcnn.pdf">Presentation</a>
     /
     <a href="Projects/wavelets/wavelet.pdf">Report</a>
-    <p>
+    <p class="research-desc">
       Developed a novel sparse neural network combining LSTM and wavelet decomposition for predicting atmospheric profile by implementing Level-2 decomposition along with LSTM and separate k-band, v-band training to improve the accuracy. </p>
   </td>
   </tr>
@@ -280,16 +295,13 @@
         <img src='images/shadow.png' width=100% height=100%>
       </div>
       <td style="padding:20px;width:50%;vertical-align:top">
-      
+        <br>
         <span class="papertitle">Shadow Removal and Detection</span>
       
     <br>
-    
-      <a href="Projects/Shadow/shadow.pdf">Presentation</a>
-      /
       <a href="Projects/Shadow/shadow.pdf">Report</a>
       <p></p>
-      <p>
+      <p class="research-desc">
         Implemented the water-filling diffusion algorithm and k-means to equalize the global and local shadow background and compared with a Stacked CGAN on an Image shadow triplets (ISTD) dataset with annotations in the form of the shadow mask. </p>
     </td>
   </tr>
@@ -303,7 +315,7 @@
       </div>
     </td>
     <td style="padding:20px;width:50%;vertical-align:top">
-      
+      <br>
       <span class="papertitle">Temperature Control using Pulse Width Modulator</span>
     
   <br>
@@ -311,7 +323,7 @@
     <a href="Projects/EDL/edl.pdf">Report</a>
    
     <p></p>
-    <p>
+    <p class="research-desc">
       Fabricated a functional prototype with temperature control, integrating a PCB layout in Eagle and creating a dynamic temperature display using an Arduino-based NTC thermistor with feedback-controlled heating.
     </p></td>
   </tr>
@@ -324,7 +336,7 @@
         <img src='images/cv.png' width=100% height=100%>
       </div>
       <td style="padding:20px;width:50%;vertical-align:top">
-      
+        <br>
         <span class="papertitle">Optical Flow Computer Vision</span>
       
     <br>
@@ -333,7 +345,7 @@
       /
       <a href="Projects/Computervision/EE350_ComputerVision.pdf">Report</a>
       <p></p>
-      <p>
+      <p class="research-desc">
       Tested Lucas Kanade Optical flow on various test cases showcasing its strength and weakness</p>  </td>
   </tr>
 </div>
