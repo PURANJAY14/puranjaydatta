@@ -278,6 +278,15 @@ input:checked + .slider:before {
   transform: translateY(-5px); /* Elevate the placard on hover */
 }
 
+ul {
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #060606; /* Header text color in dark mode */
+  width: 69%; /* Set the width to 70% of the page width */
+  margin: 0 auto; /* Center-align the h2 element horizontally */
+}
 
 h2 {
   margin: 0;

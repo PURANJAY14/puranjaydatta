@@ -99,6 +99,16 @@ h2 {
   margin: 0 auto; /* Center-align the h2 element horizontally */
 }
 
+ul {
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #f0f0f0; /* Header text color in dark mode */
+  width: 69%; /* Set the width to 70% of the page width */
+  margin: 0 auto; /* Center-align the h2 element horizontally */
+}
+
 h3 {
   margin: 0;
   font-weight: normal;
